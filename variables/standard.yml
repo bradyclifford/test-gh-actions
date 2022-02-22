@@ -1,0 +1,22 @@
+HAS_FAILOVER@dev: false
+HAS_FAILOVER@qa: false
+HAS_FAILOVER@demo: false
+HAS_FAILOVER@stage: true
+HAS_FAILOVER@prod: true
+
+# BC Static Resources
+RESOURCE_GROUP_NAME@dev dev.primary dev.secondary: 'BDAIM-D-NA26-IFPEnrollment-RGRP'
+RESOURCE_GROUP_NAME@qa qa.primary qa.secondary: 'BDAIM-Q-NA26-IFPEnrollment-RGRP'
+RESOURCE_GROUP_NAME@stage stage.primary: 'BDAIM-S-NA26-IFPEnrollment-RGRP'
+RESOURCE_GROUP_NAME@stage.secondary: 'BDAIM-S-NA27-IFPEnrollment-RGRP'
+RESOURCE_GROUP_NAME@demo demo.primary demo.secondary: 'BDAIM-O-NA26-IFPEnrollment-RGRP'
+RESOURCE_GROUP_NAME@prod prod.primary: 'BDAIM-P-NA26-IFPEnrollment-RGRP'
+RESOURCE_GROUP_NAME@prod.secondary: 'BDAIM-P-NA27-IFPEnrollment-RGRP'
+
+STORAGE_ACCOUNT_NAME@dev dev.primary dev.secondary: 'bdaimdna26ifpenrollsa'
+STORAGE_ACCOUNT_NAME@qa qa.primary qa.secondary: 'bdaimqna26ifpenrollsa'
+STORAGE_ACCOUNT_NAME@stage stage.primary stage.secondary: 'bdaimsna26ifpenrollsa'
+STORAGE_ACCOUNT_NAME@demo demo.primary demo.secondary: 'bdaimona26ifpenrollsa'
+STORAGE_ACCOUNT_NAME@prod prod.primary prod.secondary: 'bdaimpna26ifpenrollsa'
+
+STATUS_PAGE_URL@dev qa stage prod demo: 'https://tw-es.pagerduty.com/status-dashboard/ifp-connector'

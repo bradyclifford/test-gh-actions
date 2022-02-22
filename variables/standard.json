@@ -1,0 +1,23 @@
+{
+  "context": {
+    "name": "ifp-enroll",
+    "abbreviation": "ifpe",
+    "pascal_suffix": "IfpEnroll",
+    "segment_abbreviation": "BDAIM",
+    "description": "Connector Boundary with IFP Primary Entities",
+    "friendlyName": "IFP Enrollment",
+    "timezone": "America/New_York",
+  },
+  "team": {
+    "name": "Enrollment IFP Team",
+    "timezone": "America/New_York",
+    "email": "WeIFPSoftEng@extendhealth.com",
+    "pointOfContact": "Joseph Mittiga",
+    "channels": {
+      "generalPublicUri": "https://twonline.webhook.office.com/webhookb2/2af58430-7a0e-4db2-94d5-2d3a4f4c23f5@76e3921f-489b-4b7e-9547-9ea297add9b5/IncomingWebhook/9576864f6aae4058808851813cd159ad/d8d43a63-3f36-4253-b359-e77fccbf71cd",
+      "generalPrivateUri": "https://twonline.webhook.office.com/webhookb2/8a70171e-54be-4790-bab2-ec10c283eb63@76e3921f-489b-4b7e-9547-9ea297add9b5/IncomingWebhook/d1d2dc4a26ac43cab7e25e3318078c25/d8d43a63-3f36-4253-b359-e77fccbf71cd",
+      "alertsUri": "https://twonline.webhook.office.com/webhookb2/8a70171e-54be-4790-bab2-ec10c283eb63@76e3921f-489b-4b7e-9547-9ea297add9b5/IncomingWebhook/3433d44e8f6040b79366d69a510c61ab/d8d43a63-3f36-4253-b359-e77fccbf71cd",
+      "notificationsUri": "https://twonline.webhook.office.com/webhookb2/8a70171e-54be-4790-bab2-ec10c283eb63@76e3921f-489b-4b7e-9547-9ea297add9b5/IncomingWebhook/eef3d4d68ad64854b4a4ff946007c54d/d8d43a63-3f36-4253-b359-e77fccbf71cd"
+    }
+  }
+}

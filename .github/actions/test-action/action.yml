@@ -1,0 +1,35 @@
+name: 'Resolve Standard Variables'
+author: 'IFP Enrollment Connector'
+description: 'Resolves standard variables shared by IFP Enrollment Connector workflows'
+
+inputs:
+  scope:
+    description: Scope to retrieve
+    required: true
+    default: dev
+
+outputs:
+  scoped:
+    description: "Scoped Standard Variables"
+    value: ${{ toJSON(steps.set-variables.outputs) }} 
+  static: 
+    description: "Static JSON Variables"
+    value: ${{ steps.get-static-json-variables.outputs.content }}
+    
+runs:
+  using: 'composite'
+  steps:
+    - name: Set Standard Scoped Variables
+      id: set-variables
+      uses: im-open/set-environment-variables-by-scope@v1.0.4
+      with:
+        scope: ${{ inputs.scope }}
+        input-file: ${{ github.action_path }}/variables/standard.yml
+        create-output-variables: true
+
+    - name: Get Static JSON Variables    
+      id: get-static-json-variables
+      shell: bash
+      run: |
+        JSON=$(cat ${{ github.action_path }}/variables/standard.json)
+        echo "::set-output name=content::${JSON//'%'/'%25'}" 
